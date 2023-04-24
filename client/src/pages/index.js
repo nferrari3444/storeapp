@@ -1,6 +1,6 @@
 import ProductsList from './ProductsList'
 import ProductAdd from './ProductsAdd'
-import ProductsUpdate from './ProductsUpdate'
+import ProductUpdate from './ProductsUpdate'
 
 
-export {ProductsList, ProductAdd, ProductsUpdate}
+export {ProductsList, ProductAdd, ProductUpdate}

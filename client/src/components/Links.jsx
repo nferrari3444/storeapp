@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+//import styled from 'styled-components'
+import styled from 'styled-components/'
 
 const Collapse = styled.div.attrs({
     className: 'collpase navbar-collapse',
@@ -14,8 +15,10 @@ const Item = styled.div.attrs({
     className: 'collpase navbar-collapse',
 })``
 
-class Links extends Component {
-    render() {
+// class Links extends Component {
+//     render() {
+
+const Links = () => {
         return (
             <React.Fragment>
                 <Link to="/" className="navbar-brand">
@@ -25,12 +28,12 @@ class Links extends Component {
                     <List>
                         <Item>
                             <Link to="/products/list" className="nav-link">
-                                List Movies
+                                List Products
                             </Link>
                         </Item>
                         <Item>
                             <Link to="/products/create" className="nav-link">
-                                Create Movie
+                                Create Product
                             </Link>
                         </Item>
                     </List>
@@ -38,6 +41,6 @@ class Links extends Component {
             </React.Fragment>
         )
     }
-}
+
 
 export default Links

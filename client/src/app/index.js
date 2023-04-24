@@ -1,15 +1,29 @@
-import React from "react";
-import {BrowserRouter as Router} from 'ract-router-dom'
+import React, { Fragment } from "react";
+import {BrowserRouter as Router, Route, Routes}  from 'react-router-dom';
+import {Provider} from 'react-redux';
 
-import {NavBar} from '../components'
+import {NavBar} from '../components';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import {ProductsList, ProductAdd, ProductUpdate} from '../pages';
+import store from '../store/store'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  console.log('sis sis isi ')
   return (
+    <Fragment>
+    <Provider store={store}>
     <Router>
       <NavBar />
+      <Routes>
+        <Route path="/products/list" element ={<ProductsList/>} />
+        <Route path="/products/create" element ={<ProductAdd/>} />
+        <Route path="/products/update/:id" element ={<ProductUpdate/>}
+        />
+      </Routes>
     </Router>
+    </Provider>
+    </Fragment>
   )
 }
 

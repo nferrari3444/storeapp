@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+require("dotenv").config();
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 app.use(bodyParser.json());

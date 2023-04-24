@@ -1,10 +1,13 @@
 const express = require('express')
 
 const ProductCtrl = require('../controllers/product')
+const {isAdmin} = require("../controllers/auth")
+
 
 const router = express.Router()
 
-router.post('/product', ProductCtrl.createProduct)
+// CREATE
+router.post('/product',  isAdmin, ProductCtrl.createProduct)
 
 router.put('/product/:id', ProductCtrl.updateProduct )
 
